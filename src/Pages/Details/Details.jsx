@@ -3,6 +3,7 @@ import "./Details.css";
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { UseMovies } from "../../Context/MoviesContext";
 
 export const Details = ({ autherContent }) => {
   const API_kEY = import.meta.env.VITE_TMDB_KEY;
@@ -11,6 +12,7 @@ export const Details = ({ autherContent }) => {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
   const [loading, setLoading] = useState(true);
+  const { addToFavorites } = UseMovies();
 
   useEffect(() => {
     const fetchMovie = async () => {
@@ -38,7 +40,13 @@ export const Details = ({ autherContent }) => {
         style={{ margin: "auto", position: "relative" }}
         className="details p-3 container"
       >
-        <div className="favorite-btn" title="add to favorite">
+        <div
+          onClick={() => {
+            addToFavorites(movie);
+          }}
+          className="favorite-btn"
+          title="add to favorite"
+        >
           <i className="fa-solid fa-heart"></i>
         </div>
 
@@ -72,7 +80,13 @@ export const Details = ({ autherContent }) => {
               </div>
             </div>
             <div className="d-flex gap-2 mt-3">
-              <Button variant="primary">Watch Now</Button>
+              <Button
+                variant="primary"
+                href="https://www.themoviedb.org/"
+                target="_blank"
+              >
+                Watch Now
+              </Button>
               <Button variant="secondary" as={Link} to={"/"}>
                 Return Home
               </Button>

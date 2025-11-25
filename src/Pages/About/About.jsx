@@ -68,7 +68,7 @@ export const About = () => {
                 <Card.Text>
                   This project was created by <strong>Younes ABOURRIG</strong>,
                   a Junior full‑stack web developer passionate about building
-                  modern and beautiful movie-based applications.
+                  modern web applications.
                 </Card.Text>
               </Card.Body>
             </Card>
@@ -90,7 +90,10 @@ export const About = () => {
                   >
                     LinkedIn
                   </a>
-                  <a href="https://github.com/younesabourrig01" className="d-block text-info">
+                  <a
+                    href="https://github.com/younesabourrig01"
+                    className="d-block text-info"
+                  >
                     GitHub
                   </a>
                 </Card.Text>

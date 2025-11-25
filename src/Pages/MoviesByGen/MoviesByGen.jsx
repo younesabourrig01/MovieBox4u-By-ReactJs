@@ -1,4 +1,3 @@
-import "./MoniesByGen.css";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -58,7 +57,13 @@ export const MoviesByGen = () => {
         </p>
       }
     >
-      <BoxMovies movies={moviesByGen} title={genName} path={"/"} />;
+      <BoxMovies
+        movies={moviesByGen}
+        title={genName}
+        path={"/"}
+        btn="Go Home"
+      />
+      ;
     </InfiniteScroll>
   );
 };

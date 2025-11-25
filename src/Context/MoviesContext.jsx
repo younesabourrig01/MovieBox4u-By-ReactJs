@@ -18,6 +18,9 @@ export const MoviesProvider = ({ children }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
 
+  const [favorites, setFavorites] = useState([]);
+  const [message, setMessage] = useState("");
+
   // movies for the Slider
   const getSliderMovies = async () => {
     try {
@@ -87,6 +90,25 @@ export const MoviesProvider = ({ children }) => {
     }
   };
 
+  //add to favorite
+  const addToFavorites = (movie) => {
+    setFavorites((prev) => {
+      const exists = prev.find((fav) => fav.id === movie.id);
+      if (exists) {
+        setMessage("⚠️ Movie already in favorites!");
+        return prev;
+      }
+
+      setMessage("❤️ Movie added to favorites!");
+      return [...prev, movie];
+    });
+  };
+
+  //delet from favorites
+  const removeFavorite = (id) => {
+    setFavorites((prev) => prev.filter((movie) => movie.id !== id));
+  };
+
   useEffect(() => {
     getSliderMovies();
     getBoxMovies();
@@ -94,6 +116,14 @@ export const MoviesProvider = ({ children }) => {
     getTrending();
     search();
   }, []);
+
+  //auto delet msg after 2sec
+  useEffect(() => {
+    if (message) {
+      const timer = setTimeout(() => setMessage(""), 1500);
+      return () => clearTimeout(timer);
+    }
+  }, [message]);
 
   return (
     <MoviesContext.Provider
@@ -107,6 +137,10 @@ export const MoviesProvider = ({ children }) => {
         setSearchQuery,
         searchResults,
         search,
+        favorites,
+        addToFavorites,
+        removeFavorite,
+        message,
       }}
     >
       {children}

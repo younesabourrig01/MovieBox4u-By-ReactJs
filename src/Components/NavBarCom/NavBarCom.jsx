@@ -49,7 +49,7 @@ export const NavBarCom = () => {
             </Form>
 
             <Nav className="ms-auto">
-              <Nav.Link href="#link" className="nav-link">
+              <Nav.Link as={Link} to={"/favoriteList"} className="nav-link">
                 <i className="fa-solid fa-star"></i> Favorite Filmes
               </Nav.Link>
               <NavDropdown
@@ -57,15 +57,15 @@ export const NavBarCom = () => {
                 id="basic-nav-dropdown"
                 className="nav-dropdown"
               >
-                <NavDropdown.Item href="#action/3.2">
+                <NavDropdown.Item as={Link} to={"/about"}>
                   <i class="fa-solid fa-layer-group"></i>About Us
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
+                <NavDropdown.Item disabled>
                   <i class="fa-solid fa-right-to-bracket"></i>SIGN IN
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
+                <NavDropdown.Item disabled>
                   <i class="fa-solid fa-user-plus"></i>SIGN UP
                 </NavDropdown.Item>
               </NavDropdown>

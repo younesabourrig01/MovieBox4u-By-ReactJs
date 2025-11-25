@@ -1,10 +1,21 @@
 import { Link } from "react-router-dom";
 import "./MoviesCard.css";
-import { Card } from "react-bootstrap";
+import { Card, Button } from "react-bootstrap";
+import { UseMovies } from "../../Context/MoviesContext";
 
 export const MoviesCard = ({ movie }) => {
+  const { removeFavorite, favorites } = UseMovies();
+  const isFavorite = favorites.some((fav) => fav.id === movie.id);
+
   return (
     <div className="moviesCard">
+      <Button
+        variant="danger"
+        onClick={() => removeFavorite(movie.id)}
+        style={{ display: isFavorite ? "block" : "none", marginBottom : '.5rem' }}
+      >
+      ❌
+      </Button>
       <Card
         className="movie-card shadow-lg border-0"
         as={Link}

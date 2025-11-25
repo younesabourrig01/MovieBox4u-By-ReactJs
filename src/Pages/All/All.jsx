@@ -70,6 +70,8 @@ export const All = () => {
         <BoxMovies
           movies={searchQuery ? searchResults : movies}
           title="All Movies"
+          path={"/"}
+          btn="Go Home"
         />
       </InfiniteScroll>
     </div>
