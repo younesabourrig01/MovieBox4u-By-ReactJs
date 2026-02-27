@@ -1,4 +1,4 @@
-# 🎬 MovieBox4u - ReactJS Movie App
+# MovieBox4u - ReactJS Movie App
 
 ![React](https://img.shields.io/badge/React-18-blue?logo=react)
 ![Vite](https://img.shields.io/badge/Vite-Build_Tool-purple?logo=vite)
