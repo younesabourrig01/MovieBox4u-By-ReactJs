@@ -1,16 +1,45 @@
-# React + Vite
+# MovieBox4u - ReactJS Movie App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-18-blue?logo=react)
+![Vite](https://img.shields.io/badge/Vite-Build_Tool-purple?logo=vite)
+![Axios](https://img.shields.io/badge/Axios-HTTP_Client-blue?logo=axios)
+![React Router](https://img.shields.io/badge/React_Router-DOM-red?logo=reactrouter)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple?logo=bootstrap)
+![License](https://img.shields.io/badge/License-Open_Source-green)
 
-Currently, two official plugins are available:
+MovieBox4u is a modern and responsive movie browsing application built with **ReactJS**.  
+It allows users to discover movies, explore details, and enjoy a smooth infinite scrolling experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Browse trending movies
+- Search for movies
+- Infinite scrolling
+- Fully responsive design
+- Navigation with React Router
+- API integration for movie data
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Built With
+
+- ReactJS
+- Vite
+- Axios
+- React Router DOM
+- React Infinite Scroll Component
+- Bootstrap
+- React-Bootstrap
+
+---
+
+## Installation
+
+```bash
+git clone https://github.com/younesabourrig01/MovieBox4u-By-ReactJs.git
+cd MovieBox4u-By-ReactJs
+npm install
+npm run dev
+```
