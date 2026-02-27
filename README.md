@@ -43,7 +43,3 @@ cd MovieBox4u-By-ReactJs
 npm install
 npm run dev
 ```
----
-
-## Demo
-https://github.com/younesabourrig01/MovieBox4u-By-ReactJs/blob/main/src/assets/ProjectMovies2.mp4
